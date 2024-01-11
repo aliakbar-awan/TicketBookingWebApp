@@ -1,0 +1,153 @@
+<html>
+<head>
+
+<title> Add new admin </title>
+
+<script>
+	function validate()
+	{
+		if(document.adminForm.uname.value=="")
+		{
+			alert("Username is empty!");
+			document.adminForm.uname.focus();
+			return false;
+		}
+		else if(document.adminForm.fname.value=="")
+		{
+			alert("First name is empty!");
+			document.adminForm.fname.focus();
+			return false;
+		}
+		else if(document.adminForm.lname.value=="")
+		{
+			alert("Last name is empty!");
+			document.adminForm.lname.focus();
+			return false;
+		}
+		else if(document.adminForm.email.value=="")
+		{
+			alert("Email is empty!");
+			document.adminForm.email.focus();
+			return false;
+		}
+		else if(document.adminForm.usrpwd.value=="")
+		{
+			alert("Password cannot be empty!");
+			document.adminForm.usrpwd.focus();
+			return false;
+		}
+		else if(document.adminForm.confirmpwd.value=="")
+		{
+			alert("Confirm password cannot be empty!");
+			document.adminForm.confirmpwd.focus();
+			return false;
+		}
+		else if(document.adminForm.usrpwd.value != document.adminForm.confirmpwd.value)
+		{
+			alert("Password and Confirm passsowrd are not same!");
+			document.adminForm.pwd.focus();
+			return false;
+		}
+		
+	}
+	
+	
+
+</script>
+
+<style>
+	font
+	{
+		letter-spacing: -7px;
+	}
+	
+	input[type=submit]
+	{
+		width: 11%;
+		background-color: #0080ff;
+		color: white;
+		padding: 5px 10px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	ul
+	{
+		list-style-type:none;
+		background-color:#333;
+		margin:0;
+		overflow:hidden;
+		font-size:125%;
+		font-family:sans-serif;
+		
+		
+	}
+	
+	li
+	{
+		float:left;
+		
+	}
+	
+	li a
+	{
+		display:block;
+		color:white;
+		text-align:center;
+		padding: 14px 10px;
+		text-decoration:none;
+		padding-right:70px;
+		
+	}
+	.active
+	{
+		background-color:grey;
+	}
+	
+	li:hover:not(.active)
+	{
+		background-color:#111;
+	}
+	
+	
+	
+</style>
+
+</head>
+
+<body>
+	<p style="font-family:sans-serif; text-align:center; font-size:350%;"> <font color="#0080ff"> C </font> 
+	<font color="#ff0000"> h </font> <font color="#ffbf00"> a </font>
+	<font color="#0080ff"> l </font> <font color="green"> o </font> 
+	<font style="font-size:40%; letter-spacing: 0px;">.com </font></p>
+	
+	
+	<ul>
+		<li> <a href="Schedule.html"> Change Schedule </a></li>
+		<li> <a href="addNewBus.html"> Add new bus </a> </li>
+		<li class="active"> <a href="newAdmin.html"> Add new admin </a> </li>
+		<li> <a href="updateRates.html"> Update rates </a> </li>
+		<li> <a href="checkSeats.html"> Check seats </a> </li>
+		<li> <a href="viewTickets.html"> View tickets </a> </li>
+		
+	</ul>
+	
+	<br> <br>
+	<br> <br>
+		
+	<form action="Admin" onsubmit="return validate()" style="text-align:center;" name=adminForm method="post">
+	<input type= text style="font-size:120%;" size=15 name= usrname placeholder="Username for admin"> <br><br>
+	<input type= text style="font-size:120%;" size=15 name= fname placeholder="Firstname of admin"> <br><br>
+	<input type= text style="font-size:120%;" size=15 name= lname placeholder="Lastname of admin"> <br><br>
+	<input type= text style="font-size:120%;" size=15 name= email placeholder="user***@gmail.com"> <br><br>
+	<input type= text style="font-size:120%;" size=15 name= usrpwd placeholder="Password"> <br><br>
+	<input type= text style="font-size:120%;" size=15 name= confirmpwd placeholder="Confirm password"> <br><br>
+	<input type= submit style="font-size:120%;" value="Create admin">
+	
+	</form>
+	
+</body>
+
+
+</html>

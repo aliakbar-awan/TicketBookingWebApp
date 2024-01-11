@@ -1,0 +1,172 @@
+<html>
+<head>
+
+<title> Add new bus - Admin </title>
+
+<script>
+	function check()
+	{
+		
+		if(document.addBus.from.value=="")
+		{
+			alert("Please select Departure");
+			return false;
+		}
+		else if(document.addBus.to.value=="")
+		{
+			alert("Please select Destination");
+			return false;
+		}
+		else if(document.addBus.from.value==document.addBus.to.value)
+		{
+			alert("Departure and Destination cannot be same!");
+			return false;
+		}
+		else if(document.addBus.busTime.value=="")
+		{
+			alert("Please select date");
+			return 0;
+		}
+		else if(document.addBus.busDate.value=="")
+		{
+			alert("Please select date");
+			return 0;
+		}
+	}
+	
+	
+
+</script>
+
+<style>
+	font
+	{
+		letter-spacing: -7px;
+	}
+	
+	input[type=submit]
+	{
+		width: 11%;
+		background-color: #0080ff;
+		color: white;
+		padding: 5px 10px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	ul
+	{
+		list-style-type:none;
+		background-color:#333;
+		margin:0;
+		overflow:hidden;
+		font-size:125%;
+		font-family:sans-serif;
+		
+		
+	}
+	
+	li
+	{
+		float:left;
+		
+	}
+	
+	li a
+	{
+		display:block;
+		color:white;
+		text-align:center;
+		padding: 14px 10px;
+		text-decoration:none;
+		padding-right:70px;
+	}
+	.active
+	{
+		background-color:grey;
+	}
+	
+	li:hover:not(.active)
+	{
+		background-color:#111;
+	}
+	
+	
+	
+</style>
+
+</head>
+
+<body>
+	<p style="font-family:sans-serif; text-align:center; font-size:350%;"> <font color="#0080ff"> C </font> 
+	<font color="#ff0000"> h </font> <font color="#ffbf00"> a </font>
+	<font color="#0080ff"> l </font> <font color="green"> o </font> 
+	<font style="font-size:40%; letter-spacing: 0px;">.com </font></p>
+	
+	
+	<ul>
+		<li> <a href="Schedule.html"> Change Schedule </a></li>
+		<li class="active"> <a href="addNewBus.html"> Add new bus </a> </li>
+		<li> <a href="newAdmin.html"> Add new admin </a> </li>
+		<li> <a href="updateRates.html"> Update rates </a> </li>
+		<li> <a href="checkSeats.html"> Check seats </a> </li>
+		<li> <a href="viewTickets.html"> View tickets </a> </li>
+		
+	</ul>
+	
+	<br> <br>
+	
+	<form name="addBus" style="text-align:center " method="POST" onsubmit="return check()">
+	
+	<select name="from" style="width:175px; height:25px">
+		
+	
+		<option value=""> ----From---- </option>
+		
+		<option value="lahore"> Lahore </option>
+		
+		<option value="islamabad"> Islamabad </option>
+		
+		<option value="multan"> Multan </option>
+		
+		<option value="sargodha"> Sargodha </option>
+	</select>
+	
+	<br> <br> 
+	
+	<select name="to" style="width:175px; height:25px">
+		
+	
+		<option value=""> -----To----- </option>
+		
+		<option value="lahore"> Lahore </option>
+		
+		<option value="islamabad"> Islamabad </option>
+		
+		<option value="multan"> Multan </option>
+		
+		<option value="sargodha"> Sargodha </option>
+	</select>
+	
+	<br> <br>
+	
+	<input type=date name="busDate" style="width:175px; height:25px">
+	
+	<br> <br>
+	
+	<input type=time name="busTime" style="width:175px; height:25px">
+	
+	<br> <br> <br>
+	
+	<input type=submit style="font-size:120%;" value="Add bus">
+	</form>
+	
+		
+	
+	
+	
+</body>
+
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SignUp</title>
+
+<script>
+	function validate()
+	{
+		
+		if(document.signUp1.fname.value=="")
+		{
+			alert("First name is empty!");
+			document.signUp1.fname.focus();
+			return false;
+		}
+		else if(document.signUp1.lname.value=="")
+		{
+			alert("Last name is empty!");
+			document.signUp1.lname.focus();
+			return false;
+		}
+		else if(document.signUp1.email.value=="")
+		{
+			alert("Email is empty!");
+			document.signUp1.email.focus();
+			return false;
+		}
+		else if(document.signUp1.uname.value=="")
+		{
+			alert("Username is empty!");
+			document.signUp1.uname.focus();
+			return false;
+		}
+		else if(document.signUp1.pwd.value=="")
+		{
+			alert("Password cannot be empty!");
+			document.signUp1.pwd.focus();
+			return false;
+		}
+		else if(document.signUp1.confirm_pwd.value=="")
+		{
+			alert("Confirm password cannot be empty!");
+			document.signUp1.confirm_pwd.focus();
+			return false;
+		}
+		else if(document.signUp1.pwd.value != document.signUp1.confirm_pwd.value)
+		{
+			alert("Password and Confirm passsowrd are not same!");
+			document.signUp1.pwd.focus();
+			return false;
+		}
+		
+	}
+	
+</script>
+
+<style>
+	font{
+		letter-spacing: -7px;
+	}
+	
+	div{
+		border: 3px solid #ccc;
+		background-color:#c2e0ff;
+		width:45%;
+		allign:center;
+		padding-left:0px;
+	}
+	
+	input{
+		font-size:120%;
+	}
+	
+	input[type=submit]{
+		width: 15%;
+		background-color: #0080ff;
+		color: white;
+		padding: 14px 10px;
+		border: none;
+		cursor: pointer;
+	}
+	
+	body{
+		background-color:white;
+		background-image: url('image3.jpg');
+		background-size:cover;
+		
+		
+		
+	}
+	
+</style>
+
+
+</head>
+<body >
+
+
+
+	<p style="font-family:sans-serif; text-align:center; font-size:350%;"> <font color="#0080ff"> C </font> 
+	<font color="#ff0000"> h </font> <font color="#ffbf00"> a </font>
+	<font color="#0080ff"> l </font> <font color="green"> o </font> 
+	<font style="font-size:40%; letter-spacing: 0px;">.com </font></p>
+	
+
+
+
+<div>
+
+<form action="Register" style="text-align:center;" name=signUp1 method="POST" onsubmit="return validate()">
+
+	<p style="font-family:sans-serif; font-size:150%;"> Create your booking account </p>
+	<input type=text size=15 placeholder="First name" name= fname> 
+	&nbsp;
+	<input type= text size=15 placeholder="Last name" name= lname>
+	<br> <br>
+	<input type=email size=36 placeholder="Username@gmail.com" name= email> <br> <br>
+	<input type= text size=36 placeholder="Username" name= uname> <br>
+	
+	
+	<p style="color:#696969; text-align:center; font-size:120%;"> You can use letters, numbers and periods. </p>
+	
+	<input type=password size=15 placeholder="Password" name= pwd>  &nbsp;
+	<input type=password size=15 placeholder="Confirm password" name= confirm_pwd>
+	<input type=hidden name="type" value="customer">
+	<br>
+	<br>
+	<p style="color:#696969; text-align:center; font-size:120%;">
+	Use 8 or more charcters with a mix of letter numbers and symbol	</p>
+	
+	<a  href="Login.html" style=" text-decoration:none; font-family:sans-serif; color:blue; " > Sign in instead </a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type=submit style="font-size:120%;" value=Register>
+	<br> <br>
+	
+</div>
+	
+	<script>
+
+	</script>
+	
+</form>
+
+</body>
+</html>

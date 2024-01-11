@@ -1,0 +1,161 @@
+<html>
+<head>
+
+<title> Book ticket </title>
+
+<script>
+	function check()
+	{
+		
+		if(document.booking.from.value=="")
+		{
+			alert("Please select Departure");
+			return false;
+		}
+		else if(document.booking.to.value=="")
+		{
+			alert("Please select Destination");
+			return false;
+		}
+		else if(document.booking.from.value==document.booking.to.value)
+		{
+			alert("Departure and Destination cannot be same!");
+			return false;
+		}
+		else if(document.booking.date.value=="")
+		{
+			alert("Please select date");
+			return 0;
+		}
+	}
+	
+	
+
+</script>
+
+<style>
+	font
+	{
+		letter-spacing: -7px;
+	}
+	
+	input[type=submit]
+	{
+		width: 11%;
+		background-color: #0080ff;
+		color: white;
+		padding: 5px 9px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	ul
+	{
+		list-style-type:none;
+		background-color:#333;
+		margin:0;
+		overflow:hidden;
+		font-size:125%;
+		font-family:sans-serif;
+		
+		
+	}
+	
+	li
+	{
+		float:left;
+		
+	}
+	
+	li a
+	{
+		display:block;
+		color:white;
+		text-align:center;
+		padding: 14px 10px;
+		text-decoration:none;
+		padding-left:280px;
+		padding-right:260px;
+		
+	}
+	.active
+	{
+		background-color:grey;
+	}
+	
+	li:hover:not(.active)
+	{
+		background-color:#111;
+	}
+	
+	
+	
+</style>
+
+</head>
+
+<body>
+	<p style="font-family:sans-serif; text-align:center; font-size:350%;"> <font color="#0080ff"> C </font> 
+	<font color="#ff0000"> h </font> <font color="#ffbf00"> a </font>
+	<font color="#0080ff"> l </font> <font color="green"> o </font> 
+	<font style="font-size:40%; letter-spacing: 0px;">.com </font></p>
+	
+	
+	
+	<ul>
+		<li class="active"> <a href="Book.html"> Book ticket </a></li>
+		<li> <a href="Cancel.html"> Cancel ticket </a> </li>
+		
+	</ul>
+	
+	<br> <br>
+		
+	<p style="font-family:sans-serif; font-size:150%; text-align:center;"> Book your ticket here</p>
+	
+	<form name="booking" action="ShowBuses" style="text-align:center " method="POST" onsubmit="return check()">
+	
+	<select name=from style="width:175px; height:25px">
+		
+	
+		<option value=""> ----From---- </option>
+		
+		<option value="lahore"> Lahore </option>
+		
+		<option value="islamabad"> Islamabad </option>
+		
+		<option value="multan"> Multan </option>
+		
+		<option value="sargodha"> Sargodha </option>
+	</select>
+	
+	<br> <br> 
+	
+	<select name="to" style="width:175px; height:25px">
+		
+	
+		<option value=""> -----To----- </option>
+		
+		<option value="lahore"> Lahore </option>
+		
+		<option value="islamabad"> Islamabad </option>
+		
+		<option value="multan"> Multan </option>
+		
+		<option value="sargodha"> Sargodha </option>
+	</select>
+	
+	<br> <br>
+	
+	<input type=date name="date" style="width:175px; height:25px">
+	
+	<br> <br> <br>
+	
+	<input type=submit style="font-size:120%;" value="Check schedule">
+	</form>
+	
+	
+</body>
+
+
+</html>

@@ -1,0 +1,122 @@
+<html>
+<head>
+
+<title> Change rates - Admin </title>
+
+<script>
+	function check()
+	{
+		
+		if(document.booking.from.value=="")
+		{
+			alert("Please select Departure");
+			return false;
+		}
+		else if(document.booking.to.value=="")
+		{
+			alert("Please select Destination");
+			return false;
+		}
+		else if(document.booking.from.value==document.booking.to.value)
+		{
+			alert("Departure and Destination cannot be same!");
+			return false;
+		}
+		else if(document.booking.time.value=="")
+		{
+			alert("Please select date");
+			return 0;
+		}
+	}
+	
+	
+
+</script>
+
+<style>
+	font
+	{
+		letter-spacing: -7px;
+	}
+	
+	input[type=submit]
+	{
+		width: 11%;
+		background-color: #0080ff;
+		color: white;
+		padding: 5px 10px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	ul
+	{
+		list-style-type:none;
+		background-color:#333;
+		margin:0;
+		overflow:hidden;
+		font-size:125%;
+		font-family:sans-serif;
+		
+		
+	}
+	
+	li
+	{
+		float:left;
+		text-align:center;
+		
+	}
+	
+	li a
+	{
+		
+		display:block;
+		color:white;
+		padding: 14px 10px;
+		text-decoration:none;
+		padding-right:70px;
+	}
+	.active
+	{
+		background-color:grey;
+	}
+	
+	li:hover:not(.active)
+	{
+		background-color:#111;
+	}
+	
+	
+	
+</style>
+
+</head>
+
+<body>
+	<p style="font-family:sans-serif; text-align:center; font-size:350%;"> <font color="#0080ff"> C </font> 
+	<font color="#ff0000"> h </font> <font color="#ffbf00"> a </font>
+	<font color="#0080ff"> l </font> <font color="green"> o </font> 
+	<font style="font-size:40%; letter-spacing: 0px;">.com </font></p>
+	
+	
+	<ul>
+		<li> <a href="Schedule.html"> Change Schedule </a></li>
+		<li> <a href="addNewBus.html"> Add new bus </a> </li>
+		<li> <a href="newAdmin.html"> Add new admin </a> </li>
+		<li class="active"> <a href="updateRates.html"> Update rates </a> </li>
+		<li> <a href="checkSeats.html"> Check seats </a> </li>
+		<li> <a href="viewTickets.html"> View tickets </a> </li>
+		
+	</ul>
+	
+	<br> <br>
+		
+	
+	
+	
+</body>
+
+
+</html>
